@@ -8,6 +8,7 @@ from vertexai.preview.language_models import TextGenerationModel
 load_dotenv()
 # os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = base64.b64decode(os.getenv('GOOGLE_APPLICATION_CREDENTIALS')).decode('utf-8')
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+PROJECT_ID = os.getenv('PROJECT_ID')
 
 def predict_large_language_model_sample(
     project_id: str,
@@ -34,7 +35,7 @@ def predict_large_language_model_sample(
     print(f"Response from Model: {response.text}")
 
 # TODO: remove the content query
-predict_large_language_model_sample("renata-386011", "text-bison@001", 0.1, 89, 0.1, 5, '''Growing a plantation in easy steps, using the provided info such as soil type
+predict_large_language_model_sample(PROJECT_ID, "text-bison@001", 0.1, 89, 0.1, 5, '''Growing a plantation in easy steps, using the provided info such as soil type
 
 input: How to plant a rose in aluvial soil?
 output: 1. Prepare the soil by tilling it and adding compost or manure.

@@ -33,6 +33,7 @@ def predict_large_language_model_sample(
         top_p=top_p,)
     print(f"Response from Model: {response.text}")
 
+# TODO: remove the content query
 predict_large_language_model_sample("renata-386011", "text-bison@001", 0.1, 89, 0.1, 5, '''Growing a plantation in easy steps, using the provided info such as soil type
 
 input: How to plant a rose in aluvial soil?

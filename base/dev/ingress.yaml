@@ -16,6 +16,13 @@ spec:
   - host: "dev.renata-app.xyz"
     http:
       paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: renata-backend-api-service
+            port:
+              number: 80
       - path: /api/predict
         pathType: ImplementationSpecific
         backend:

@@ -24,14 +24,14 @@ spec:
             port:
               number: 80
       - path: /api/predict
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: renata-growing-plants-api-service
             port:
               number: 80
       - path: /api/growing-plants-service
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: renata-growing-plants-api-service

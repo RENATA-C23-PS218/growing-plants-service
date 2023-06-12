@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: renata-backend-api-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: renata-dev-gke-ip
+    networking.gke.io/managed-certificates: renata-backend-api-certificate
+    kubernetes.io/ingress.class: "gce"
+spec:
+  defaultBackend:
+    service:
+      name: renata-backend-api-service
+      port:
+        number: 80
+  rules:
+  - host: "dev.renata-app.xyz"
+    http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: renata-backend-api-service
+            port:
+              number: 80

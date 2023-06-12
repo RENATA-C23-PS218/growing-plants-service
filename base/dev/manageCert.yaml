@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: renata-backend-api-certificate
+spec:
+  domains:
+  - dev.renata-app.xyz

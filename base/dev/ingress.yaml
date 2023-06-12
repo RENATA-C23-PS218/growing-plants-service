@@ -11,7 +11,7 @@ spec:
     service:
       name: renata-growing-plants-api-service
       port:
-        number: 5000
+        number: 81
   rules:
   - host: "dev.renata-app.xyz"
     http:
@@ -22,18 +22,18 @@ spec:
           service:
             name: renata-backend-api-service
             port:
-              number: 3000
+              number: 80
       - path: /api/predict
         pathType: Prefix
         backend:
           service:
             name: renata-growing-plants-api-service
             port:
-              number: 5000
+              number: 81
       - path: /api/growing-plants-service
         pathType: Prefix
         backend:
           service:
             name: renata-growing-plants-api-service
             port:
-              number: 5000
+              number: 81

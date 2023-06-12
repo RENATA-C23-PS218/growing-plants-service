@@ -8,7 +8,7 @@ PROJECT_ID = os.getenv('PROJECT_ID')
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/growing-plant-service')
+@app.route('/api/growing-plants-service')
 def home():
 	return jsonify({'status': 200,'success': True, 'message': 'Server running well', 'data': None }), 200
 

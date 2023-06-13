@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "PROJECT_ID_DEV",
+  "private_key_id": "PROMPT_SERVICE_ACCOUNT_PRIVATE_KEY_ID_DEV",
+  "private_key": "PROMPT_SERVICE_ACCOUNT_PRIVATE_KEY_DEV",
+  "client_email": "PROMPT_SERVICE_ACCOUNT_CLIENT_EMAIL_DEV",
+  "client_id": "PROMPT_SERVICE_ACCOUNT_CLIENT_ID_DEV",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "PROMPT_SERVICE_ACCOUNT_CLIENT_CERT_URL_DEV",
+  "universe_domain": "googleapis.com"
+}

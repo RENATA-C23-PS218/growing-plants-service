@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: renata-growing-plants-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: renata-growing-plants-api
+  template:
+    metadata:
+      labels:
+        app: renata-growing-plants-api
+    spec:
+      containers:
+      - name: renata-growing-plants-api-service
+        image: ENV_GAR_LOCATION-docker.pkg.dev/ENV_PROJECT_ID/ENV_REPOSITORY/ENV_IMAGE:ENV_GITHUB_SHA
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: GOOGLE_PROJECT_ID
+          valueFrom:
+            secretKeyRef:
+              name: renata-backend-api-secret
+              key: GOOGLE_PROJECT_ID

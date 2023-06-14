@@ -6,7 +6,7 @@ To use this code please follow the instructions below:
 
 This is the API service using Flask and PaLM 2 Model with our Soils Dataset to give the Growing Plants Steps in RENATA APP. <br>
 
-We also use another service using Express JS for [Backend Service](https://github.com/RENATA-C23-PS218/backend-service/) using Flask<br>
+We also use another service using Express JS for [Backend Service](https://github.com/RENATA-C23-PS218/backend-service/)<br>
 
 The API documentation can be accessed at [Renata Swagger API Documentation](https://renata-app.xyz/api/docs) <br>
 
